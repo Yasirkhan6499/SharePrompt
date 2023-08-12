@@ -6,7 +6,7 @@ export const GET = async (request, response) => {
     await connectToDB();
 
     // Set appropriate cache-control headers
-    response.setHeader("Cache-Control", "no-store, must-revalidate");
+    // response.setHeader("Cache-Control", "no-store, must-revalidate");
 
     const prompts = await Prompt.find({}).populate("creator");
 
